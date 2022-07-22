@@ -85,7 +85,7 @@ sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persisten
 ## Prometheus'u Aktif Etme
 ```shell
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.stride/config/config.toml
-```shell
+```
 
 ## Pruning'i Ayarlama
 ```shell
