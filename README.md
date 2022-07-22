@@ -101,7 +101,7 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 ## Zincir Verilerini Sıfırlama
 ```shell
-stride tendermint unsafe-reset-all --home $HOME/.stride
+strided tendermint unsafe-reset-all --home $HOME/.stride
 ```
 
 ## Servis Dosyası Oluşturma
