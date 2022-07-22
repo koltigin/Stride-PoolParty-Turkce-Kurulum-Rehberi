@@ -213,17 +213,17 @@ systemctl restart strided
 
 ### Node Senkronizasyon Durumu
 ```shell
-strided status 2&1  jq .SyncInfo
+strided status 2>&1 | jq .SyncInfo
 ```
 
 ### Validator Bilgileri
 ```shell
-strided status 2&1  jq .ValidatorInfo
+strided status 2>&1 | jq .ValidatorInfo
 ```
 
 ### Node Bilgileri
 ```shell
-strided status 2&1  jq .NodeInfo
+strided status 2>&1 | jq .NodeInfo
 ```
 
 ### Node ID Öğrenme
@@ -238,7 +238,7 @@ curl icanhazip.com
 
 ### Peer Adresinizi Öğrenme
 ```shell
-echo $(stride tendermint show-node-id)@$(curl ifconfig.me)26656
+echo $(strided tendermint show-node-id)@$(curl ifconfig.me)16656
 ```
 
 ### Cüzdanların Listesine Bakma
@@ -263,7 +263,7 @@ strided query bank balances CUZDAN_ADRESI
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```shell
-strided tx bank send CUZDAN_ADRESI GONDERILECEK_CUZDAN_ADRESI 100000000usei
+strided tx bank send CUZDAN_ADRESI GONDERILECEK_CUZDAN_ADRESI 100000000ustrd
 ```
 
 ### Proposal Oylamasına Katılma
@@ -278,7 +278,7 @@ strided tx staking delegate $VALOPER_ADDRESS 100000000utoi --from=$WALLET --chai
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme  Redelegate Etme
 ```shell
-strided tx staking redelegate MevcutValidatorAdresi StakeEdilecekYeniValidatorAdresi 100000000utori --from=WALLET --chain-id=CHAIN_ID  --gas=auto
+strided tx staking redelegate MevcutValidatorAdresi StakeEdilecekYeniValidatorAdresi 100000000ustrd --from=WALLET --chain-id=CHAIN_ID  --gas=auto
 ```
 
 ### Ödülleri Çekme
