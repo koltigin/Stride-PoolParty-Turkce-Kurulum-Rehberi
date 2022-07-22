@@ -121,7 +121,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
-```shell
+```
 
 ## Servisi Başlatma
 ```shell
