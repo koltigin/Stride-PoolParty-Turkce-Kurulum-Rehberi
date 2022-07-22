@@ -1,4 +1,5 @@
 # Stride Testnet - PoolParty: Türkçe Node Kurulum Rehberi
+![Stride-1](https://user-images.githubusercontent.com/102043225/180435619-36ea3c1e-410d-4abb-b7c0-ec21152bbcfb.png)
 
 ##  Sistem Gereksinimleri
 * 4vCPU
@@ -31,7 +32,7 @@ go version
 ```
 
 ## Değişkenleri Yükleme
-aşağıda değiştirmeniz gereken yerleri yazıyorum.
+Aşağıda değiştirmeniz gereken yerleri yazıyorum.
 * '$NODENAME' validator adınız
 * '$WALLET' cüzdan adınız
 ```shell
@@ -41,13 +42,6 @@ echo "export STRIDE_PORT=16" >> $HOME/.bash_profile
 echo "export CHAIN_ID=atlantic-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
----
-echo "export NODENAME=KolTigin"  >> $HOME/.bash_profile
-echo "export WALLET=KolTigin" >> $HOME/.bash_profile
-echo "export STRIDE_PORT=16" >> $HOME/.bash_profile
-echo "export CHAIN_ID="atlantic-1 >> $HOME/.bash_profile
-source $HOME/.bash_profile
----
 
 ## Stride Kurulumu
 ```shell
