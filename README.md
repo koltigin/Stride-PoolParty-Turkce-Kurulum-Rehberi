@@ -145,7 +145,7 @@ strided keys add $WALLET
 * BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.
 
 ## Faucet  Musluk
-Test token almak için Discord'da [#token-faucet](https://discord.gg/HXgZSzstTV) kanalından şu şekilde `$faucet:CUZDAN_ADRESINIZ` mesaj atıyoruz.
+Test token almak için Discord'da [#token-faucet](https://discord.gg/HXgZSzstTV) kanalından şu şekilde `$faucet-stride:CUZDAN_ADRESINIZ` mesaj atıyoruz.
 
 ## Cüzdan Bakiyesini Kontrol Etme
 ```shell
