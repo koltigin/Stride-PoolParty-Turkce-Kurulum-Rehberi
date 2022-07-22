@@ -165,22 +165,22 @@ strided status 2>&1 | jq .SyncInfo
 
 ## Validator Oluşturma
  Aşağıdaki komutta aşağıda berlittiğim yerler dışında bir değişikli yapmanız gerekmez;
-   'identity'  buraya `httpskeybase.io` sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.
+   'identity'  buraya `https://keybase.io` sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.
    'details'  kendiniz hakkında bilgiler verebilir ya da `Rues Community Supporter` yazabilirsiniz.
-   'website'  Varsa bir siteniz yazabilirsiniz ya da `httpsforum.rues.info` olarak bırakabilirsiniz.
+   'website'  Varsa bir siteniz yazabilirsiniz ya da `https://forum.rues.info` olarak bırakabilirsiniz.
    'security-contact'  E-posta adresiniz.
 ```shell 
 strided tx staking create-validator 
  --commission-max-change-rate=0.01 
  --commission-max-rate=0.2 
  --commission-rate=0.05 
- --amount 9900000usdtr 
+ --amount 9900000ustrd 
  --pubkey=$(strided  tendermint show-validator) 
  --moniker=$NODENAME 
  --chain-id=$CHAIN_ID 
  --details=Rues Community Supporter 
  --security-contact=E-POSTANIZ 
- --website=httpsforum.rues.info 
+ --website=https://forum.rues.info 
  --identity=XXXX1111XXXX1111 
  --min-self-delegation=1000000 
  --from=$WALLET
