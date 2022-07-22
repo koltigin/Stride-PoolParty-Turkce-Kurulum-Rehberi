@@ -39,7 +39,7 @@ Aşağıda değiştirmeniz gereken yerleri yazıyorum.
 echo "export NODENAME=$NODENAME"  >> $HOME/.bash_profile
 echo "export WALLET=$WALLET" >> $HOME/.bash_profile
 echo "export STRIDE_PORT=16" >> $HOME/.bash_profile
-echo "export CHAIN_ID=atlantic-1" >> $HOME/.bash_profile
+echo "export CHAIN_ID=STRIDE-1" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
