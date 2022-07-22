@@ -106,14 +106,14 @@ strided tendermint unsafe-reset-all --home $HOME/.stride
 
 ## Servis Dosyası Oluşturma
 ```shell
-tee /etc/systemd/system/strided.service > /dev/null <<EOF
+tee <<EOF >/dev/null /etc/systemd/system/strided.service 
 [Unit]
 Description=stride
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which strided) start --home $HOME/.stride
+ExecStart=$(which strided) start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
@@ -126,8 +126,8 @@ EOF
 ## Servisi Başlatma
 ```shell
 sudo systemctl daemon-reload
-sudo systemctl enable stride
-sudo systemctl restart stride
+sudo systemctl enable strided
+sudo systemctl restart strided
 ```
 
 ## Logları Kontrol Etme
