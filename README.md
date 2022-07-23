@@ -284,7 +284,7 @@ strided tx gov vote 1 yes --from $WALLET --chain-id=CHAIN_ID
 
 ### Validatore Stake Etme  Delegate Etme
 ```shell
-strided tx staking delegate $VALOPER_ADDRESS 100000000utoi --from=$WALLET --chain-id=C$HAIN_ID  --gas=auto
+strided tx staking delegate $VALOPER_ADDRESS 100000000ustrd --from=$WALLET --chain-id=$CHAIN_ID  --gas=auto
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme  Redelegate Etme
