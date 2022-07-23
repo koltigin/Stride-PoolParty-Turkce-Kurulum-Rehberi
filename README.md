@@ -176,19 +176,19 @@ strided status 2>&1 | jq .SyncInfo
    'website'  Varsa bir siteniz yazabilirsiniz ya da `https://forum.rues.info` olarak bırakabilirsiniz.
    'security-contact'  E-posta adresiniz.
 ```shell 
-strided tx staking create-validator 
- --commission-max-change-rate=0.01 
- --commission-max-rate=0.2 
- --commission-rate=0.05 
- --amount 9900000ustrd 
- --pubkey=$(strided  tendermint show-validator) 
- --moniker=$NODENAME 
- --chain-id=$CHAIN_ID 
- --details=Rues Community Supporter 
- --security-contact=E-POSTANIZ 
- --website=https://forum.rues.info 
- --identity=XXXX1111XXXX1111 
- --min-self-delegation=1000000 
+strided tx staking create-validator \
+ --commission-max-change-rate=0.01 \
+ --commission-max-rate=0.2 \
+ --commission-rate=0.05 \
+ --amount 9900000ustrd \
+ --pubkey=$(strided tendermint show-validator) \
+ --moniker=$NODENAME \
+ --chain-id=$CHAIN_ID \
+ --details="Rues Community Supporter" \
+ --security-contact="E-POSTANIZ" \
+ --website="https://forum.rues.info" \
+ --identity="XXXX1111XXXX1111" \
+ --min-self-delegation=1000000 \
  --from=$WALLET
  ```  
 
