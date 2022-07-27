@@ -146,6 +146,13 @@ sudo systemctl restart strided
 journalctl -u strided -f -o cat
 ```  
 
+## Hata Alırsanız
+Loglarda aşağıdaki gibi bir hata alırsanız `ctrl c` yaptıktan sonra sonraki adımı uygulayınız.
+```shell
+strided.service: Main process exited, code=exited, status=1/FAILURE
+strided.service: Failed with result 'exit-code'.
+```
+
 ## PEER Sorunu Yaşarsanız
 Aşağıdaki kod verileri temizler ve state sync yüklemesi yapar. State sync, blokların belli bir kısmımı karşıdan yükleyerek snaphot alınan bloklardan başlamasıdır. Yani bloklara sıfırdan başlamazsınız.
 ```shell 
