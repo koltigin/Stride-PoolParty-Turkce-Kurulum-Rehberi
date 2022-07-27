@@ -6,6 +6,10 @@
 * 8GB RAM
 * 200GB SSD
 
+## Stride-1 Testnetine Katılanlar için Güncelleme
+Stride'ın ilk testnetine katılıp validator oluşturduysanız aşağıdaki linkten devam ediniz.
+https://github.com/koltigin/Stride-PoolParty-Turkce-Kurulum-Rehberi/blob/main/Stride-Testnet-2-Guncellemesi.md
+
 ## Sistemi Güncelleme
 ```shell
 sudo apt update && sudo apt upgrade -y
@@ -201,6 +205,37 @@ Sei Discord [#role-request](https://discord.gg/HXgZSzstTV) kanalından validator
 ## DAHA FAZLA SORUNUZ VARSA STRIDE TÜRKİYE TELEGRAM GRUBU
 
 [Stride Türkiye Telegram Sayfası](httpst.meTeritoriTurkish)
+
+## PEER Sorunu Yaşarsanız
+Aşağıdaki kod verileri temizler ve state sync yüklemesi yapar. State sync, blokların belli bir kısmımı karşıdan yükleyerek snaphot alınan bloklardan başlamasıdır. Yani bloklara sıfırdan başlamazsınız.
+```shell 
+sudo systemctl stop strided
+cd $HOME && rm -rf stride
+git clone https://github.com/Stride-Labs/stride.git
+cd stride
+git checkout 3cb77a79f74e0b797df5611674c3fbd000dfeaa1
+make build
+sudo cp $HOME/stride/build/strided /usr/local/bin
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.stride/config/config.toml
+strided tendermint unsafe-reset-all --home $HOME/.stride
+
+SEEDS=""; \
+PEERS="48b1310bc81deea3eb44173c5c26873c23565d33@34.135.129.186:26656,0f45eac9af97f4b60d12fcd9e14a114f0c085491@stride-library.poolparty.stridenet.co:26656 (http://,0f45eac9af97f4b60d12fcd9e14a114f0c085491@stride-library.poolparty.stridenet.co:26656/)"; \
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.stride/config/config.toml
+wget -O $HOME/.stride/config/addrbook.json "https://github.com/mmc6185/node-testnets/blob/main/stride/addrbook.json?raw=true"
+SNAP_RPC=https://stride-library.poolparty.stridenet.co:443
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
+s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.stride/config/config.toml
+sudo systemctl restart strided && journalctl -u strided -f -o cat
+```shell 
 
 ## FAYDALI KOMUTLAR
 
