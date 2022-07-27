@@ -235,7 +235,7 @@ s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.stride/config/config.toml
 sudo systemctl restart strided && journalctl -u strided -f -o cat
-```shell 
+```
 
 ## FAYDALI KOMUTLAR
 
