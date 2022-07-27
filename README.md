@@ -1,4 +1,4 @@
-# Stride Testnet - PoolParty: Türkçe Node Kurulum Rehberi
+# Stride Testnet - PoolParty: Türkçe Node Kurulum Rehberi (Testnet-2'ye Güncellendi)
 ![Stride-1](https://user-images.githubusercontent.com/102043225/180435619-36ea3c1e-410d-4abb-b7c0-ec21152bbcfb.png)
 
 ##  Sistem Gereksinimleri
@@ -39,7 +39,7 @@ Aşağıda değiştirmeniz gereken yerleri yazıyorum.
 echo "export NODENAME=$NODENAME"  >> $HOME/.bash_profile
 echo "export WALLET=$WALLET" >> $HOME/.bash_profile
 echo "export STRIDE_PORT=16" >> $HOME/.bash_profile
-echo "export CHAIN_ID=STRIDE-1" >> $HOME/.bash_profile
+echo "export CHAIN_ID=STRIDE-TESTNET-2" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -48,7 +48,7 @@ source $HOME/.bash_profile
 cd $HOME
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
-git checkout c53f6c562d9d3e098aab5c27303f41ee055572cb
+git checkout 3cb77a79f74e0b797df5611674c3fbd000dfeaa1
 make build
 cp $HOME/stride/build/strided /usr/local/bin
 ```
@@ -68,7 +68,7 @@ strided init $NODENAME --chain-id $CHAIN_ID
 ## Genesis ve Addrbook Dosyalarının İndirilmesi
 ```shell
 curl https://raw.githubusercontent.com/Stride-Labs/testnet/main/poolparty/genesis.json > ~/.stride/config/genesis.json
-curl https://raw.githubusercontent.com/StakeTake/guidecosmos/main/stride/STRIDE-1/addrbook.json > ~/.stride/config/addrbook.json
+curl https://github.com/mmc6185/node-testnets/blob/main/stride/addrbook.json?raw=true > ~/.stride/config/addrbook.json
 ```
 
 ## Minimum GAS Ücretinin Ayarlanması
@@ -78,8 +78,8 @@ sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ustrd\"/" $HOME/.s
 
 ## SEED ve PEERS Ayarlanması
 ```shell
-SEEDS="baee9ccc2496c2e3bebd54d369c3b788f9473be9@seedv1.poolparty.stridenet.co:26656"
-PEERS=""
+SEEDS="c0b278cbfb15674e1949e7e5ae51627cb2a2d0a9@seedv2.poolparty.stridenet.co:26656"
+PEERS="c4a02dca3b58a3ac0cf89115d7912cac54e12e2d@38.242.159.74:26656,d6583df382d418872ab5d71d45a1a8c3d28ff269@138.201.139.175:21016,05d7b774620b7afe28bba5fa9e002b436786d4c3@195.201.165.123:20086,d28cfff8b2fe03b597f67c96814fbfd19085b7c3@168.119.124.158:26656,a9687b78c13d39d2f96ec0905c6aa201671f61f0@78.107.234.44:25656,6922feb0ca2eab2be07d60fbfd275319bcd83ec9@77.244.66.222:26656,48b1310bc81deea3eb44173c5c26873c23565d33@34.135.129.186:26656,a3afae256ad780f873f85a0c377da5c8e9c28cb2@54.219.207.30:26656,dd93bd24192d8d3151264424e44b0f213d2334dc@162.55.173.64:26656,d46c3c3de3aacb7c75bbbbf1fe5c168f0c100f26@135.181.131.116:26683,c765007c489ddbcb80249579534e63d7a00407d0@65.108.225.158:22656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.stride/config/config.toml
 ```
 
