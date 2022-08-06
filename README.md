@@ -22,7 +22,7 @@ sudo apt install curl make build-essential gcc tmux jq chrony htop -y < "/dev/nu
 
 ## Go Kurulumu
 ```shell
-ver="1.18.3"
+ver="1.18.4"
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
 rm -rf /usr/local/go
 tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
@@ -37,8 +37,8 @@ go version
 
 ## Değişkenleri Yükleme
 Aşağıda değiştirmeniz gereken yerleri yazıyorum.
-* '$NODENAME' validator adınız
-* '$WALLET' cüzdan adınız
+* `$NODENAME` validator adınız
+* `$WALLET` cüzdan adınız
 ```shell
 echo "export NODENAME=$NODENAME"  >> $HOME/.bash_profile
 echo "export WALLET=$WALLET" >> $HOME/.bash_profile
