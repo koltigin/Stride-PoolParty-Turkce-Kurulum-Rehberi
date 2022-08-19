@@ -1,4 +1,4 @@
-# Stride Testnet - PoolParty: Türkçe Node Kurulum Rehberi (Testnet-2'ye Güncellendi)
+# Stride Testnet - PoolParty: Türkçe Node Kurulum Rehberi (Testnet-4'e Güncellendi)
 ![Stride-1](https://user-images.githubusercontent.com/102043225/180435619-36ea3c1e-410d-4abb-b7c0-ec21152bbcfb.png)
 
 ##  Sistem Gereksinimleri
@@ -6,9 +6,9 @@
 * 8GB RAM
 * 200GB SSD
 
-## Stride-1 Testnetine Katılanlar için Güncelleme
-Stride'ın ilk testnetine katılıp validator oluşturduysanız aşağıdaki linkten devam ediniz.
-* https://github.com/koltigin/Stride-PoolParty-Turkce-Kurulum-Rehberi/blob/main/Stride-Testnet-2-Guncellemesi.md
+## Stride Testnet-2'ye Katılanlar için Testnet-4 Güncellemesi
+Stride'ın ikinci testnetine katılıp validator oluşturduysanız aşağıdaki linkten devam ediniz.
+* https://github.com/koltigin/Stride-PoolParty-Turkce-Kurulum-Rehberi/blob/main/Stride-Testnet-4-Guncellemesi.md
 
 ## Sistemi Güncelleme
 ```shell
@@ -213,10 +213,10 @@ strided status 2>&1 | jq .SyncInfo
 
 ## Validator Oluşturma
  Aşağıdaki komutta aşağıda berlittiğim yerler dışında bir değişikli yapmanız gerekmez;
-   'identity'  buraya `https://keybase.io` sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.
-   'details'  kendiniz hakkında bilgiler verebilir ya da `Rues Community Supporter` yazabilirsiniz.
-   'website'  Varsa bir siteniz yazabilirsiniz ya da `https://forum.rues.info` olarak bırakabilirsiniz.
-   'security-contact'  E-posta adresiniz.
+   `identity`  buraya `https://keybase.io` sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.
+   `details` kendiniz hakkında bilgiler verebilir ya da `Rues Community Supporter` yazabilirsiniz.
+   `website`  Varsa bir siteniz yazabilirsiniz ya da `https://forum.rues.info` olarak bırakabilirsiniz.
+   `security-contact`  E-posta adresiniz.
  ```shell 
 strided tx staking create-validator \
 --amount=9900000ustrd \
