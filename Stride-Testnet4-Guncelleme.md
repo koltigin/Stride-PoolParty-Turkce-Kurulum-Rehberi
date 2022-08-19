@@ -62,10 +62,10 @@ strided status 2>&1 | jq .SyncInfo
 
 ## Validator Oluşturma
  Aşağıdaki komutta aşağıda berlittiğim yerler dışında bir değişikli yapmanız gerekmez;
-   `identity`  buraya `https://keybase.io` sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.
-   `details` kendiniz hakkında bilgiler verebilir ya da `Rues Community Supporter` yazabilirsiniz.
-   `website`  Varsa bir siteniz yazabilirsiniz ya da `https://forum.rues.info` olarak bırakabilirsiniz.
-   `security-contact`  E-posta adresiniz.
+   * `identity`  buraya `https://keybase.io` sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.
+   * `details` kendiniz hakkında bilgiler verebilir ya da `Rues Community Supporter` yazabilirsiniz.
+   * `website`  Varsa bir siteniz yazabilirsiniz ya da `https://forum.rues.info` olarak bırakabilirsiniz.
+   * `security-contact`  E-posta adresiniz.
  ```shell 
 strided tx staking create-validator \
 --amount=9900000ustrd \
