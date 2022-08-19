@@ -8,7 +8,7 @@
 
 ## Stride Testnet-2'ye Katılanlar için Testnet-4 Güncellemesi
 Stride'ın ikinci testnetine katılıp validator oluşturduysanız aşağıdaki linkten devam ediniz.
-* https://github.com/koltigin/Stride-PoolParty-Turkce-Kurulum-Rehberi/blob/main/Stride-Testnet-4-Guncellemesi.md
+* https://github.com/koltigin/Stride-PoolParty-Turkce-Kurulum-Rehberi/blob/main/Stride-Testnet4-Guncelleme.md
 
 ## Sistemi Güncelleme
 ```shell
