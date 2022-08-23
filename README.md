@@ -10,6 +10,10 @@
 Stride'ın ikinci testnetine katılıp validator oluşturduysanız aşağıdaki linkten devam ediniz.
 * https://github.com/koltigin/Stride-PoolParty-Turkce-Kurulum-Rehberi/blob/main/Stride-Testnet4-Guncelleme.md
 
+## Stride Testnet 4 - PoolParty - V2 Yazılım Güncellemesi
+Testnet 4'te 70500. blokta gerçekleşen ilk güncellemedir. Aşağıdaki linkten ulaşabilirsiniz.
+* https://github.com/koltigin/Stride-PoolParty-Turkce-Kurulum-Rehberi/blob/main/Stride-Testnet4-V2-Yazilim-Guncellemesi.md
+
 ## Sistemi Güncelleme
 ```shell
 sudo apt update && sudo apt upgrade -y
