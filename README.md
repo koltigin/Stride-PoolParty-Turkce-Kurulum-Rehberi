@@ -43,7 +43,7 @@ Aşağıda değiştirmeniz gereken yerleri yazıyorum.
 echo "export NODENAME=$NODENAME"  >> $HOME/.bash_profile
 echo "export WALLET=$WALLET" >> $HOME/.bash_profile
 echo "export STRIDE_PORT=16" >> $HOME/.bash_profile
-echo "export CHAIN_ID=STRIDE-TESTNET-2" >> $HOME/.bash_profile
+echo "export CHAIN_ID=STRIDE-TESTNET-4" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
@@ -52,7 +52,7 @@ source $HOME/.bash_profile
 cd $HOME
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
-git checkout 3cb77a79f74e0b797df5611674c3fbd000dfeaa1
+git checkout cf4e7f2d4ffe2002997428dbb1c530614b85df1b
 make build
 cp $HOME/stride/build/strided /usr/local/bin
 ```
