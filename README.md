@@ -389,10 +389,10 @@ rm -rf $(which strided)
 ### Hesaplar
 
 [Linktree](https://linktr.ee/mehmetkoltigin)
-[Twitter](https://twitter.com.mehmetkoltigin)
+[Twitter](https://twitter.com/mehmetkoltigin))
 
 ### Komunite 
-[Forum Rues](https://forum.rues.infoindex.php)
+[Forum Rues](https://forum.rues.info/index.php))
 
 [Telegram Rues Announcement](https://t.meRuesAnnouncement)
 
