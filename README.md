@@ -388,8 +388,7 @@ rm -rf $(which strided)
 
 ### Hesaplar
 
-[Linktree](https://linktr.ee.mehmetkoltigin)
-<a href="https://linktr.ee/mehmetkoltigin" target="_blank">Linktree</a>
+[Linktree](https://linktr.ee/mehmetkoltigin)
 [Twitter](https://twitter.com.mehmetkoltigin)
 
 ### Komunite 
