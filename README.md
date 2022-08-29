@@ -50,6 +50,14 @@ echo "export STRIDE_PORT=16" >> $HOME/.bash_profile
 echo "export CHAIN_ID=STRIDE-TESTNET-4" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
+* Düzenleyeceğiniz kod aşağıdakine benzer olacak. Anlamanız için faydalı olacaktır. 
+```shell
+echo "export NODENAME=Bilge"  >> $HOME/.bash_profile
+echo "export WALLET=Bilge" >> $HOME/.bash_profile
+echo "export STRIDE_PORT=16" >> $HOME/.bash_profile
+echo "export CHAIN_ID=STRIDE-TESTNET-4" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
 
 ## Stride Kurulumu
 ```shell
