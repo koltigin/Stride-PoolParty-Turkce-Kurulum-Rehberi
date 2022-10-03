@@ -386,18 +386,16 @@ rm -rf .stride stride &&
 rm -rf $(which strided)
 ```
 
-### Hesaplar
+# Hesaplar
 
-[Linktree](https://linktr.ee/mehmetkoltigin)
-[Twitter](https://twitter.com/mehmetkoltigin))
+[Anatolian Team](https://anatolianteam.com)
 
-### Komunite 
-[Forum Rues](https://forum.rues.info/index.php))
+[Twitter](https://twitter.commehmetkoltigin)
 
-[Telegram Rues Announcement](https://t.meRuesAnnouncement)
+[Medium](https://medium.com/@mehmetkoltigin)
 
-[Telegram Rues Chat](https://t.meRuesChat)
+[YouTube](https://www.youtube.com/channel/UCmLgaftx5e38BE0E7gpY2dA)
 
-[Telegram Rues Node](https://t.meRuesNode)
+[Discord](https://discordapp.com/users/837933958280904737)
 
-[Telegram Rues Node Chat](https://t.meRuesNodeChat)
+[Telegram](https://t.me/mehmetkoltigin)
